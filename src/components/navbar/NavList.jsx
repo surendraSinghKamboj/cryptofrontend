@@ -7,7 +7,7 @@ const Navlist=[
         url:"/cryptocurrency"
     },{
         name:"Exchanges",
-        url:"/exchanges"
+        url:"/exchange"
     },{
         name:"NFT",
         url:"/nft"

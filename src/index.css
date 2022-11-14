@@ -6,3 +6,6 @@
 li:hover{
     background: rgba(34, 3, 211, 0.938);
 }
+a{
+    text-decoration: none;
+}
