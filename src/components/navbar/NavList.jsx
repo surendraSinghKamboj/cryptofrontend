@@ -9,6 +9,9 @@ const Navlist=[
         name:"Exchanges",
         url:"/exchanges"
     },{
+        name:"NFT",
+        url:"/nft"
+    },{
         name:"Learn Crypto",
         url:"/learnCrypto"
     },{
