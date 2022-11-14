@@ -9,8 +9,10 @@ export default function Navbar() {
 
   return (
     <>
-      <h1>Crypto Dashboard</h1>
+      <div style={NavbarStyle.divbox}>
+      <h1 style={NavbarStyle.h1}>Crypto Dashboard</h1>
       <ul style={NavbarStyle.ul}>{listItems}</ul>
+      </div>
     </>
   );
 }
