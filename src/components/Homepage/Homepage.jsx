@@ -1,5 +1,11 @@
-import React from 'react';
+import React from "react";
+// import axios from "axios";
+import HomepageStyle from "./HomepageStyle";
 
 export default function Homepage() {
-    return <h1>Homepage</h1>
-};
+  return (
+    <div style={HomepageStyle.mainDiv}>
+      <h2>Welcome to Crypto Dashboard</h2>
+    </div>
+  );
+}
