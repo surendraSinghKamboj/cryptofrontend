@@ -12,7 +12,7 @@ const options = {
     "tiers[0]": "1",
     orderBy: "marketCap",
     orderDirection: "desc",
-    limit: "25",
+    limit: "50",
     offset: "0",
   },
   headers: {
@@ -42,7 +42,7 @@ export default function Homepage() {
       <div style={HomepageStyle.table}>
         <table border={0} width="800">
           <thead>
-            <tr className="glass">
+            <tr style={HomepageStyle.tableHead}>
               <th>Logo</th>
               <th>Symbol</th>
               <th>Name</th>
