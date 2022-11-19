@@ -7,7 +7,13 @@ const HomepageStyle={
     },
     table:{
         display:"flex",
-        justifyContent:"center"
+        justifyContent:"center",
+        marginTop:"20px"
+    },
+    chart:{
+        width:"800px",
+        height:"500px",
+        margin:"auto",
     }
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import HomepageStyle from "./HomepageStyle";
 
+
 const options = {
   method: "GET",
   url: "https://coinranking1.p.rapidapi.com/coins",
@@ -11,7 +12,7 @@ const options = {
     "tiers[0]": "1",
     orderBy: "marketCap",
     orderDirection: "desc",
-    limit: "50",
+    limit: "25",
     offset: "0",
   },
   headers: {
@@ -29,13 +30,15 @@ export default function Homepage() {
         setData(response.data.data.coins);
       })
       .catch(function (error) {
-        console.error(error);
+        setData(error);
       });
   }, []);
 
   return (
     <div style={HomepageStyle.mainDiv}>
       <h2>Welcome to Crypto Dashboard</h2>
+      <hr />
+      {/* <ChartComponent style={HomepageStyle.chart} /> */}
       <div style={HomepageStyle.table}>
         <table border={0} width="800">
           <thead>
@@ -54,10 +57,12 @@ export default function Homepage() {
                 return (
                   <>
                     <tr className="glass">
-                      <td><img src={item.iconUrl} alt="logo" width={24}/></td>
+                      <td>
+                        <img src={item.iconUrl} alt="logo" width={24} />
+                      </td>
                       <td>{item.symbol}</td>
-                      <td>{item.name}</td>
-                      <td>{parseFloat(item.price).toFixed(2)}</td>
+                      <td style={{textAlign:"left"}}>{item.name}</td>
+                      <td>{`$ ${parseFloat(item.price).toFixed(2)}`}</td>
                       <td>{`${item.change}%`}</td>
                       <td>{item.marketCap}</td>
                     </tr>
