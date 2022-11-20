@@ -5,9 +5,6 @@ const Navlist=[
     },{
         name:"Cryptocurrency",
         url:"/cryptocurrency"
-    },{
-        name:"Chart",
-        url:"/Chart"
     }
 ]
 

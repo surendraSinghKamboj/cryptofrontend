@@ -6,7 +6,7 @@ const ChartComponent = () => {
   const options = {
     method: "GET",
     url: "https://coinranking1.p.rapidapi.com/coin/Qwsogvtv82FCd/history",
-    params: { referenceCurrencyUuid: "yhjMzLPhuIDl", timePeriod: "24h" },
+    params: { referenceCurrencyUuid: "razxDUgYGNAdQ", timePeriod: "3h" },
     headers: {
       "X-RapidAPI-Key": "38ae4a066dmsh3cb1c14ed33d50bp1db328jsn5927802ec888",
       "X-RapidAPI-Host": "coinranking1.p.rapidapi.com",
@@ -29,7 +29,16 @@ const ChartComponent = () => {
       .catch(function (error) {
         console.error(error);
       });
-  }, []);
+
+
+  });
+
+  const chartOptions = {
+    title: "Etherium",
+    curveType: "function",
+    legend: { position: "right" },
+    backgroundColor:"white",
+  };
 
   return (
     <div style={{margin:"auto"}}>
@@ -38,6 +47,7 @@ const ChartComponent = () => {
       data={history}
       width="100%"
       height="500px"
+      options={chartOptions}
       legendToggle
     />
     </div>
