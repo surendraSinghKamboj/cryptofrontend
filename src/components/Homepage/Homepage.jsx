@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import HomepageStyle from "./HomepageStyle";
+import ChartComponent from "../Chart/ChartComponent";
 
 
 const options = {
@@ -38,6 +39,7 @@ export default function Homepage() {
     <div style={HomepageStyle.mainDiv}>
       <h2>Welcome to Crypto Dashboard</h2>
       <hr />
+      <ChartComponent />
       <div style={HomepageStyle.table}>
         <table border={0} width="800">
           <thead>
