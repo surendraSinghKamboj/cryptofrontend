@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import axios from "axios";
+import CryptoStyle from "./CryptoStyle";
 
 const options = {
   method: "GET",
@@ -32,7 +33,7 @@ const Cryptocurrency = () => {
   }, []);
 
   return (
-    <div>
+    <div style={CryptoStyle.mainBox}>
       <h1>Cryptocurrency</h1>
     </div>
   );

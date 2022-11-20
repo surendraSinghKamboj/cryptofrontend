@@ -38,12 +38,10 @@ export default function Homepage() {
     <div style={HomepageStyle.mainDiv}>
       <h2>Welcome to Crypto Dashboard</h2>
       <hr />
-      {/* <ChartComponent style={HomepageStyle.chart} /> */}
       <div style={HomepageStyle.table}>
         <table border={0} width="800">
           <thead>
             <tr style={HomepageStyle.tableHead}>
-              <th>Logo</th>
               <th>Symbol</th>
               <th>Name</th>
               <th>Price</th>
@@ -57,9 +55,6 @@ export default function Homepage() {
                 return (
                   <>
                     <tr className="glass">
-                      <td>
-                        <img src={item.iconUrl} alt="logo" width={24} />
-                      </td>
                       <td>{item.symbol}</td>
                       <td style={{textAlign:"left"}}>{item.name}</td>
                       <td>{`$ ${parseFloat(item.price).toFixed(2)}`}</td>
