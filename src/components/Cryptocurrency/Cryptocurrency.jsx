@@ -3,7 +3,6 @@ import CryptoStyle from "./CryptoStyle";
 import ChartComponent from "../Chart/ChartComponent";
 
 const Cryptocurrency = () => {
-
   return (
     <div style={CryptoStyle.mainBox}>
       <div>
