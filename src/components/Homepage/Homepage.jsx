@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 import HomepageStyle from "./HomepageStyle";
 import ChartComponent from "../Chart/ChartComponent";
@@ -53,11 +54,16 @@ export default function Homepage() {
           <tbody>
             {data &&
               data.map((item) => {
+                console.log(item);
                 return (
                   <>
                     <tr className="glass">
                       <td>{item.symbol}</td>
-                      <td style={{ textAlign: "left" }}>{item.name}</td>
+                      <td style={{ textAlign: "left" }}>
+                        <Link to={`/cryptocurrency:${item.uuid}`}>
+                          {item.name}
+                        </Link>
+                      </td>
                       <td>{`$ ${parseFloat(item.price).toFixed(2)}`}</td>
                       <td>{`${item.change}%`}</td>
                       <td>{item.marketCap}</td>
