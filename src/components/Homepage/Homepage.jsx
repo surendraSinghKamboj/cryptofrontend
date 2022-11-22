@@ -3,7 +3,6 @@ import axios from "axios";
 import HomepageStyle from "./HomepageStyle";
 import ChartComponent from "../Chart/ChartComponent";
 
-
 const options = {
   method: "GET",
   url: "https://coinranking1.p.rapidapi.com/coins",
@@ -58,7 +57,7 @@ export default function Homepage() {
                   <>
                     <tr className="glass">
                       <td>{item.symbol}</td>
-                      <td style={{textAlign:"left"}}>{item.name}</td>
+                      <td style={{ textAlign: "left" }}>{item.name}</td>
                       <td>{`$ ${parseFloat(item.price).toFixed(2)}`}</td>
                       <td>{`${item.change}%`}</td>
                       <td>{item.marketCap}</td>
