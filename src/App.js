@@ -10,7 +10,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
-        <Route path="/cryptocurrency" element={<Cryptocurrency />} />
+        <Route path="/cryptocurrency/:uuid" element={<Cryptocurrency />} />
       </Routes>
       <Footer />
     </BrowserRouter>

@@ -54,13 +54,12 @@ export default function Homepage() {
           <tbody>
             {data &&
               data.map((item) => {
-                console.log(item);
                 return (
                   <>
                     <tr className="glass">
                       <td>{item.symbol}</td>
                       <td style={{ textAlign: "left" }}>
-                        <Link to={`/cryptocurrency:${item.uuid}`}>
+                        <Link to={`/cryptocurrency/${item.uuid}`}>
                           {item.name}
                         </Link>
                       </td>
