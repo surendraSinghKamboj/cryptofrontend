@@ -4,18 +4,22 @@ import Navlist from "./NavList";
 import NavbarStyle from "./NavbarStyle";
 
 export default function Navbar() {
+  
+
   let listItems = Navlist.map((element) => {
     return (
       <NavLink to={element.url}>
         <li style={NavbarStyle.li}>{element.name}</li>
       </NavLink>
-    )
+    );
   });
 
   return (
     <>
       <div style={NavbarStyle.divbox}>
-        <NavLink to="/"><h1 style={NavbarStyle.h1}>Crypto Dashboard</h1></NavLink>
+        <NavLink to="/">
+          <h1 style={NavbarStyle.h1}>Crypto Dashboard</h1>
+        </NavLink>
         <ul style={NavbarStyle.ul}>{listItems}</ul>
       </div>
     </>

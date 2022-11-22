@@ -5,6 +5,7 @@ import axios from "axios";
 
 const ChartComponent = () => {
   const { uuid } = useParams();
+
   const [url, setUrl] = useState("Qwsogvtv82FCd");
   if (uuid !== url) {
     setUrl(uuid);
@@ -39,16 +40,24 @@ const ChartComponent = () => {
   });
 
   const chartOptions = {
-    title: uuid,
+    title: "Area Chart",
     curveType: "function",
     legend: { position: "right" },
+    series: {
+      color: "#e2431e",
+    },
     backgroundColor: "white",
+    animation: {
+      duration: 1000,
+      easing: "out",
+    },
+    crosshair: { orientation: "both", color: "green" },
   };
 
   return (
     <div style={{ margin: "auto" }}>
       <Chart
-        chartType="LineChart"
+        chartType="AreaChart"
         data={history}
         width="100%"
         height="500px"

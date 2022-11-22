@@ -4,7 +4,7 @@ const Navlist=[
         url:"/"
     },{
         name:"Cryptocurrency",
-        url:"/cryptocurrency/Qwsogvtv82FCd"
+        url:"/cryptocurrency/Hm3OlynlC"
     }
 ]
 

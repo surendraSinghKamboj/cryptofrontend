@@ -40,6 +40,11 @@ export default function Homepage() {
       <h2>Welcome to Crypto Dashboard</h2>
       <hr />
       <ChartComponent />
+    <div style={{textAlign:"center"}}>
+      <h3>
+        Top Crypto Currancy
+      </h3>
+    </div>
       <div style={HomepageStyle.table}>
         <table border={0} width="800">
           <thead>
