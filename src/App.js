@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import Homepage from "./components/Homepage/Homepage";
 import Cryptocurrency from "./components/Cryptocurrency/Cryptocurrency";
 import Footer from "./components/footer/Footer";
+import { SocialIcon } from "react-social-icons";
 
 function App() {
   return (
