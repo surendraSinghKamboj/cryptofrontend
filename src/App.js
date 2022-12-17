@@ -3,6 +3,7 @@ import Navbar from "./components/navbar/Navbar";
 import Homepage from "./components/Homepage/Homepage";
 import Cryptocurrency from "./components/Cryptocurrency/Cryptocurrency";
 import Footer from "./components/footer/Footer";
+import Searchbar from "./components/Searchbar/Searchbar";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Homepage />} />
+        <Route path="/Search" element={<Searchbar />} />
         <Route path="/cryptocurrency/:uuid" element={<Cryptocurrency />} />
       </Routes>
       <Footer />

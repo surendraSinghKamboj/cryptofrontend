@@ -40,11 +40,9 @@ export default function Homepage() {
       <h2>Welcome to Crypto Dashboard</h2>
       <hr />
       <ChartComponent />
-    <div style={{textAlign:"center"}}>
-      <h3>
-        Top Crypto Currancy
-      </h3>
-    </div>
+      <div style={{ textAlign: "center" }}>
+        <h3>Top Crypto Currancy</h3>
+      </div>
       <div style={HomepageStyle.table}>
         <table border={0} width="800">
           <thead>
@@ -58,21 +56,19 @@ export default function Homepage() {
           </thead>
           <tbody>
             {data &&
-              data.map((item) => {
+              data.map((item, index) => {
                 return (
-                  <>
-                    <tr className="glass">
-                      <td>{item.symbol}</td>
-                      <td style={{ textAlign: "left" }}>
-                        <Link to={`/cryptocurrency/${item.uuid}`}>
-                          {item.name}
-                        </Link>
-                      </td>
-                      <td>{`$ ${parseFloat(item.price).toFixed(2)}`}</td>
-                      <td>{`${item.change}%`}</td>
-                      <td>{item.marketCap}</td>
-                    </tr>
-                  </>
+                  <tr className="glass" key={index}>
+                    <td>{item.symbol}</td>
+                    <td style={{ textAlign: "left" }}>
+                      <Link to={`/cryptocurrency/${item.uuid}`}>
+                        {item.name}
+                      </Link>
+                    </td>
+                    <td>{`$ ${parseFloat(item.price).toFixed(2)}`}</td>
+                    <td>{`${item.change}%`}</td>
+                    <td>{item.marketCap}</td>
+                  </tr>
                 );
               })}
           </tbody>

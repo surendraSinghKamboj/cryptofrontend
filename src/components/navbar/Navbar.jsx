@@ -4,11 +4,9 @@ import Navlist from "./NavList";
 import NavbarStyle from "./NavbarStyle";
 
 export default function Navbar() {
-  
-
-  let listItems = Navlist.map((element) => {
+  let listItems = Navlist.map((element, key) => {
     return (
-      <NavLink to={element.url}>
+      <NavLink to={element.url} key={key}>
         <li style={NavbarStyle.li}>{element.name}</li>
       </NavLink>
     );
