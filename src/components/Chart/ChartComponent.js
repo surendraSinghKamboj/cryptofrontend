@@ -49,7 +49,7 @@ const ChartComponent = () => {
     backgroundColor: "white",
     animation: {
       duration: 1000,
-      easing: "out",
+      easing: "in",
     },
     crosshair: { orientation: "both", color: "green" },
   };
